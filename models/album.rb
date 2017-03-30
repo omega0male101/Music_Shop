@@ -36,4 +36,9 @@ class Album
     SqlRunner.run(sql)
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM albums WHERE id = #{id};"
+    result = Artist.map_items(sql)
+  end
+
 end  
