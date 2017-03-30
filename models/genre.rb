@@ -10,6 +10,7 @@ class Genre
   end
 end
 
+
 def save()
   sql = "INSERT INTO genres (type) VALUES ('#{@type}') RETURNING *;"
   genre_data = SqlRunner.run(sql)
