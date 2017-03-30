@@ -19,3 +19,8 @@ def save()
   album_data = SqlRunner.run(sql)
   @id = album_data.first()['id']
 end
+
+def self.delete_all
+  sql = "DELETE FROM albums"
+  SqlRunner.run(sql)
+end
