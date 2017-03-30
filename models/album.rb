@@ -20,6 +20,11 @@ class Album
     @id = album_data.first()['id']
   end
 
+  def self.all()
+    sql = "SELECT * FROM albums;"
+    result = Albums.map_items(sql)
+  end
+
   def self.map_items(sql)
     albums = SqlRunner.run(sql)
     result = albums.map {|album| Album.new(album)}
