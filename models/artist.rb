@@ -16,3 +16,10 @@ def save()
   artist_data = SqlRunner.run(sql)
   @id = artist_data.first()['id']
 end
+
+def self.delete_all
+  sql = "DELETE FROM artists"
+  SqlRunner.run(sql)
+end
+
+
