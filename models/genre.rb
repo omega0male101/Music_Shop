@@ -16,6 +16,11 @@ class Genre
     @id = genre_data.first()['id']
   end
 
+  def self.all()
+    sql = "SELECT * FROM genres;"
+    result = Genres.map_items(sql)
+  end
+
   def self.map_items(sql)
     genres = SqlRunner.run(sql)
     result = genres.map {|genre| Genre.new(genre)}
