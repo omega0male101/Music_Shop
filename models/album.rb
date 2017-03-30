@@ -38,7 +38,7 @@ class Album
 
   def self.find(id)
     sql = "SELECT * FROM albums WHERE id = #{id};"
-    result = Artist.map_items(sql)
+    result = Album.map_items(sql)
   end
 
 end  

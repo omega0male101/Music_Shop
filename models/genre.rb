@@ -32,4 +32,9 @@ class Genre
     SqlRunner.run(sql)
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM genres WHERE id = #{id};"
+    result = Genre.map_items(sql)
+  end
+
 end
