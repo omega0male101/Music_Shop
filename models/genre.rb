@@ -18,7 +18,7 @@ class Genre
 
   def self.all()
     sql = "SELECT * FROM genres;"
-    result = Genres.map_items(sql)
+    result = Genre.map_items(sql)
   end
 
   def self.map_items(sql)

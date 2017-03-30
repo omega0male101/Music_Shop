@@ -21,6 +21,11 @@ class Artist
     result = Artist.map_items(sql)
   end
 
+  def self.all_names()
+    sql = "SELECT name FROM artists;"
+    result = Artist.map_items(sql)
+  end
+
   def self.map_items(sql)
     artists = SqlRunner.run(sql)
     result = artists.map {|artist| Artist.new(artist)}

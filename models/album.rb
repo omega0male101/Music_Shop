@@ -22,7 +22,7 @@ class Album
 
   def self.all()
     sql = "SELECT * FROM albums;"
-    result = Albums.map_items(sql)
+    result = Album.map_items(sql)
   end
 
   def self.map_items(sql)
