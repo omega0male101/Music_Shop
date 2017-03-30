@@ -37,6 +37,11 @@ class Artist
     SqlRunner.run(sql)
   end
 
+  def self.find(id)
+    sql = "SELECT * FROM artists WHERE id = #{id};"
+    result = Artist.map_items(sql)
+  end
+
 end
 
 
