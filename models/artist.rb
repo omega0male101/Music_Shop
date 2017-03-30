@@ -9,17 +9,19 @@ class Artist
     @bio = options['bio']
     @id = options['id'].to_i
   end
-end
 
-def save()
-  sql = "INSERT INTO artists (name, bio) VALUES ('#{@name}', '#{@bio}') RETURNING *;"
-  artist_data = SqlRunner.run(sql)
-  @id = artist_data.first()['id']
-end
 
-def self.delete_all
-  sql = "DELETE FROM artists"
-  SqlRunner.run(sql)
+  def save()
+    sql = "INSERT INTO artists (name, bio) VALUES ('#{@name}', '#{@bio}') RETURNING *;"
+    artist_data = SqlRunner.run(sql)
+    @id = artist_data.first()['id']
+  end
+
+  def self.delete_all
+    sql = "DELETE FROM artists"
+    SqlRunner.run(sql)
+  end
+
 end
 
 

@@ -12,15 +12,17 @@ class Album
     @quantity = options['quantity'].to_i
     @id = options['id'].to_i
   end
-end
 
-def save()
-  sql = "INSERT INTO albums (title, artwork, artist_id, genre_id, quantity) VALUES ('#{@title}', '#{@artwork}', '#{@artist_id}', '#{@genre_id}', '#{@quantity}',) RETURNING *;"
-  album_data = SqlRunner.run(sql)
-  @id = album_data.first()['id']
-end
 
-def self.delete_all
-  sql = "DELETE FROM albums"
-  SqlRunner.run(sql)
-end
+  def save()
+    sql = "INSERT INTO albums (title, artwork, artist_id,   genre_id, quantity) VALUES ('#{@title}', '#{@artwork  }', '#{@artist_id}', '#{@genre_id}', '#{@quantity}  ',) RETURNING *;"
+    album_data = SqlRunner.run(sql)
+    @id = album_data.first()['id']
+  end
+  
+  def self.delete_all
+    sql = "DELETE FROM albums"
+    SqlRunner.run(sql)
+  end
+
+end  
