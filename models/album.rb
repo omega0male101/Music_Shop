@@ -14,11 +14,15 @@ class Album
     @id = options['id'].to_i
   end
 
-
   def save()
     sql = "INSERT INTO albums (title, artwork, artist_id, genre_id, quantity, price) VALUES ('#{@title}', '#{@artwork  }', '#{@artist_id}', '#{@genre_id}', '#{@quantity}', '#{@price}') RETURNING *;"
     album_data = SqlRunner.run(sql)
     @id = album_data.first()['id']
+  end
+
+  def delete()
+    sql = "DELETE FROM albums WHERE id = #{ @id}"
+    result = SqlRunner.run(sql)
   end
 
   def self.all()
