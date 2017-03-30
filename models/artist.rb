@@ -1,6 +1,6 @@
 require_relative('../db/sql_runner')
 
-class Album
+class Artist
   attr_reader :id
   attr_accessor :name, :bio
 
