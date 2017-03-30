@@ -19,5 +19,6 @@ CREATE TABLE albums (
   artist_id INT4 REFERENCES artists(id),
   genre_id INT4 REFERENCES genres(id),
   artwork TEXT,
-  quantity INT2
+  quantity INT2,
+  price INT2
   );

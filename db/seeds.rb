@@ -40,6 +40,7 @@ require('pry-byebug')
       "genre_id" => genre2.id,
       "artist_id" => artist1.id,
       "quantity" => 7,
+      "price" => 9,
       "artwork" => "FILL IN URL LATER"
       })
 
@@ -48,6 +49,7 @@ require('pry-byebug')
       "genre_id" => genre2.id,
       "artist_id" => artist1.id,
       "quantity" => 6,
+      "price" => 7,
       "artwork" => "FILL IN URL LATER"
       })
 
@@ -56,6 +58,7 @@ require('pry-byebug')
       "genre_id" => genre1.id,
       "artist_id" => artist2.id,
       "quantity" => 5,
+      "price" => 8,
       "artwork" => "FILL IN URL LATER"
       })
 
