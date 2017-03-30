@@ -10,11 +10,15 @@ class Artist
     @id = options['id'].to_i
   end
 
-
   def save()
     sql = "INSERT INTO artists (name, bio) VALUES ('#{@name}', '#{@bio}') RETURNING *;"
     artist_data = SqlRunner.run(sql)
     @id = artist_data.first()['id']
+  end
+
+  def self.all()
+    sql = "SELECT * FROM artists;"
+    result = Artist.map_items(sql)
   end
 
   def self.map_items(sql)
