@@ -15,9 +15,15 @@ class Album
 
 
   def save()
-    sql = "INSERT INTO albums (title, artwork, artist_id,   genre_id, quantity) VALUES ('#{@title}', '#{@artwork  }', '#{@artist_id}', '#{@genre_id}', '#{@quantity}  ',) RETURNING *;"
+    sql = "INSERT INTO albums (title, artwork, artist_id,   genre_id, quantity) VALUES ('#{@title}', '#{@artwork  }', '#{@artist_id}', '#{@genre_id}', '#{@quantity}  ') RETURNING *;"
     album_data = SqlRunner.run(sql)
     @id = album_data.first()['id']
+  end
+
+  def self.map_items(sql)
+    albums = SqlRunner.run(sql)
+    result = albums.map {|album| Album.new(album)}
+    return result
   end
   
   def self.delete_all
