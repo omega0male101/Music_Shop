@@ -16,6 +16,11 @@ class Artist
     @id = artist_data.first()['id']
   end
 
+  def delete()
+    sql = "DELETE FROM artists WHERE id = #{ @id}"
+    result = SqlRunner.run(sql)
+  end
+
   def self.all()
     sql = "SELECT * FROM artists;"
     result = Artist.map_items(sql)
