@@ -16,6 +16,11 @@ class Genre
     @id = genre_data.first()['id']
   end
 
+  def delete()
+    sql = "DELETE FROM genre WHERE id = #{ @id}"
+    result = SqlRunner.run(sql)
+  end
+
   def self.all()
     sql = "SELECT * FROM genres;"
     result = Genre.map_items(sql)
