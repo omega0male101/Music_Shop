@@ -1,5 +1,6 @@
 require_relative('../models/album')
 require_relative('../models/artist')
+require_relative('../models/genre')
 require('pry-byebug')
 
   Album.delete_all
