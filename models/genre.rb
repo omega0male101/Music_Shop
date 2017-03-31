@@ -21,6 +21,13 @@ class Genre
     result = SqlRunner.run(sql)
   end
 
+  def update()
+    sql = "UPDATE genres SET
+      type = '#{ @type }'
+      WHERE id = '#{ @id }';"
+    result = SqlRunner.run(sql)
+  end
+
   def self.all()
     sql = "SELECT * FROM genres;"
     result = Genre.map_items(sql)
