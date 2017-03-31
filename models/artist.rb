@@ -21,6 +21,14 @@ class Artist
     result = SqlRunner.run(sql)
   end
 
+  def update()
+    sql = "UPDATE artists SET
+      name = '#{ @name }',
+      bio = '#{ @bio }'
+      WHERE id = '#{ @id }';"
+    result = SqlRunner.run(sql)
+  end
+
   def self.all()
     sql = "SELECT * FROM artists;"
     result = Artist.map_items(sql)

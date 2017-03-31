@@ -17,7 +17,7 @@ class Genre
   end
 
   def delete()
-    sql = "DELETE FROM genre WHERE id = #{ @id}"
+    sql = "DELETE FROM genres WHERE id = #{ @id}"
     result = SqlRunner.run(sql)
   end
 

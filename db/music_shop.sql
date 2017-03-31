@@ -16,8 +16,8 @@ CREATE TABLE genres (
 CREATE TABLE albums (
   id SERIAL8 PRIMARY KEY,
   title VARCHAR(255),
-  artist_id INT4 REFERENCES artists(id),
-  genre_id INT4 REFERENCES genres(id),
+  artist_id INT4 REFERENCES artists(id) ON DELETE CASCADE,
+  genre_id INT4 REFERENCES genres(id) ON DELETE CASCADE,
   artwork TEXT,
   quantity INT2,
   price INT2
