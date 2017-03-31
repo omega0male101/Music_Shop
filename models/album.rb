@@ -25,6 +25,18 @@ class Album
     result = SqlRunner.run(sql)
   end
 
+  def update()
+    sql = "UPDATE albums SET
+      title = '#{ @title }',
+      artwork = '#{ @artwork }',
+      artist_id = '#{ @artist_id }',
+      genre_id = '#{ @genre_id }',
+      quantity = '#{ @quantity }',
+      price = '#{ @price }'
+      WHERE id = '#{ @id }';"
+    result = SqlRunner.run(sql)
+  end
+
   def self.all()
     sql = "SELECT * FROM albums;"
     result = Album.map_items(sql)
