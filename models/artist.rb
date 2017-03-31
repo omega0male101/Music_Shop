@@ -17,6 +17,11 @@ class Artist
   end
 
   def delete()
+    sql = "UPDATE albums SET artist_id = null WHERE artist_id = #{ @id }; DELETE FROM artists WHERE id = #{@id};"
+    SqlRunner.run(sql)
+  end
+
+  def delete_full()
     sql = "DELETE FROM artists WHERE id = #{ @id}"
     result = SqlRunner.run(sql)
   end
