@@ -22,6 +22,10 @@ require('pry-byebug')
   artist2.save
 
 #--SETTING UP GENRES
+    genre0 = Genre.new({
+      "type" => " - "
+      })
+
     genre1 = Genre.new({
       "type" => "Electronic"
       })
@@ -30,6 +34,7 @@ require('pry-byebug')
       "type" => "Rock"
       })
 
+  genre0.save
   genre1.save
   genre2.save
 
@@ -41,6 +46,7 @@ require('pry-byebug')
       "artist_id" => artist1.id,
       "quantity" => 7,
       "price" => 9,
+      "sold" => 5,
       "artwork" => "FILL IN URL LATER"
       })
 
@@ -50,6 +56,7 @@ require('pry-byebug')
       "artist_id" => artist1.id,
       "quantity" => 6,
       "price" => 7,
+      "sold" => 5,
       "artwork" => "FILL IN URL LATER"
       })
 
@@ -59,6 +66,7 @@ require('pry-byebug')
       "artist_id" => artist2.id,
       "quantity" => 5,
       "price" => 8,
+      "sold" => 5,
       "artwork" => "FILL IN URL LATER"
       })
 

@@ -20,5 +20,6 @@ CREATE TABLE albums (
   genre_id INT4 REFERENCES genres(id) ON DELETE CASCADE,
   artwork TEXT,
   quantity INT2,
+  sold INT2,
   price INT2
   );

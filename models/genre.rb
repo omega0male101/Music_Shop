@@ -16,21 +16,29 @@ class Genre
     @id = genre_data.first()['id']
   end
 
-  def delete()
+  ###############################################
+
+    def delete()
+      sql = "UPDATE albums SET genre_id = null WHERE genre_id = #{ @id }; DELETE FROM genres WHERE id = #{@id};"
+      SqlRunner.run(sql)
+    end
+
+  ###############################################
+
+  def delete_full()
     sql = "DELETE FROM genres WHERE id = #{ @id}"
-    result = SqlRunner.run(sql)
+    SqlRunner.run(sql)
   end
 
   def update()
-    sql = "UPDATE genres SET
-      type = '#{ @type }'
-      WHERE id = '#{ @id }';"
-    result = SqlRunner.run(sql)
+    sql = "UPDATE genres SET type = '#{@type}' WHERE id = #{@id} "
+    SqlRunner.run(sql)
   end
 
   def self.all()
     sql = "SELECT * FROM genres;"
     result = Genre.map_items(sql)
+    return result
   end
 
   def self.map_items(sql)
