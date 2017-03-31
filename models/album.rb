@@ -39,6 +39,7 @@ class Album
     result = SqlRunner.run(sql)
   end
 
+
   def stock
     sql = "SELECT quantity FROM albums WHERE id = #{id}"
     result = SqlRunner.run(sql).first().values().pop().to_i
