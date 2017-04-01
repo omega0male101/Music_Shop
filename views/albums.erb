@@ -1,0 +1,27 @@
+<div class="grid">
+<% for album in @albums %>
+
+
+
+<div class="grid-row">
+
+
+<div class="grid-cell name">
+<p>
+  <img class="albums_img" src= "<%= album.url_address %>" alt=""></p>
+  <p>Name: <span id="album_name"><%= album.title()%></span></p>
+
+  </div>
+  <div class="grid-cell bio">
+  <p>
+
+    <%= album.price%>
+
+  </p>
+  </div>
+
+  </div>
+<% end%>
+</div>
+
+
