@@ -4,11 +4,12 @@
 
 
 <div class="update_form">
+
+<img class="album_picture" src="<%= @album.artwork %>">
+
   <ul>
     <li><label for="title-name">Title:</label>
     <input id="title-name" type="text" name="title"  value="<%= @album.title %>"/><br/></li>
-    
-    <img class="album_picture" src="http://www.davidbowie.com/sites/g/files/g2000002506/f/styles/large/public/201302/1972_ziggy_cvr_fix_800sq.jpg">
 
     <li><label for="artist-select">Select a Artist:</label><select id="artist-select" name="artist_id">
         <% @artists.each do|artist|%>
@@ -38,7 +39,7 @@
      <li><label for="price">Price:</label>
      <input id="price" type="number" name="price"  value="<%= @album.price %>"/></li>
 
- <input type="submit" value="Edit Album"/>
+ <input type="submit" value="Update Album"/>
  </ul>
 </div>
 </form>
