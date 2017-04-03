@@ -21,7 +21,7 @@ body {
 
 .blur_bolder {
    color: transparent;
-   text-shadow: 0 0 1px rgba(0,0,0,0.5);
+   text-shadow: 0 0 1px rgba(0,0,0,0.8);
    text-align: center;
 }
 
@@ -34,16 +34,29 @@ body {
 
 .album_picture {
   border-radius: 10px;
-  box-shadow: 15px 5px 15px 10px rgba(0,0,0,0.4);
+  box-shadow: 15px 5px 10px 10px rgba(0,0,0,0.4);
   transition: 0.7s;
-  align: left;
+  float: left;
   width: 22%;
-  margin-right: 60px;
+  margin-left: 14%;
+  margin-right: 35px;
   padding-right: 0px;
+  margin-bottom: 10px;
+  display: inline-block;
 }
 
 .update_form {
+  
 
+}
+
+.update_form, ul {
+  font-size: 18px;
+  text-decoration: none;
+  list-style: none;
+  margin-top: 4%;
+  text-align: left;
+  margin-left: 10%;
 
 }
 
@@ -53,7 +66,7 @@ body {
 nav {
   max-width: 1040px;
   mask-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 25%, #ffffff 75%, rgba(255, 255, 255, 0) 100%);
-  margin: 0 auto;
+  margin: 0;
   padding: 5px;
   overflow:hidden;
 }

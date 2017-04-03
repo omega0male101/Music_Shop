@@ -77,7 +77,7 @@ require('pry-byebug')
       "quantity" => 7,
       "price" => 9,
       "sold" => 5,
-      "artwork" => "http://www.davidbowie.com/sites/g/files/g2000002506/f/styles/large/public/201302/1972_ziggy_cvr_fix_800sq.jpg"
+      "artwork" => "/images/album_covers/ziggy.jpg"
       
       })
 
@@ -88,7 +88,7 @@ require('pry-byebug')
       "quantity" => 6,
       "price" => 7,
       "sold" => 5,
-      "artwork" => "FILL IN URL LATER"
+      "artwork" => "/images/album_covers/changes.jpg"
       })
 
     album3 = Album.new({
@@ -98,7 +98,7 @@ require('pry-byebug')
       "quantity" => 5,
       "price" => 8,
       "sold" => 5,
-      "artwork" => "FILL IN URL LATER"
+      "artwork" => "/images/album_covers/play.jpg"
       })
 
     album4 = Album.new({
@@ -108,7 +108,7 @@ require('pry-byebug')
       "quantity" => 9,
       "price" => 10,
       "sold" => 2,
-      "artwork" => "FILL IN URL LATER"
+      "artwork" => "/images/album_covers/london.jpg"
       })
 
     album5 = Album.new({
@@ -118,7 +118,7 @@ require('pry-byebug')
       "quantity" => 7,
       "price" => 14,
       "sold" => 8,
-      "artwork" => "FILL IN URL LATER"
+      "artwork" => "/images/album_covers/white_album.jpg"
       })
 
     album6 = Album.new({
@@ -128,7 +128,7 @@ require('pry-byebug')
       "quantity" => 8,
       "price" => 9,
       "sold" => 2,
-      "artwork" => "FILL IN URL LATER"
+      "artwork" => "/images/album_covers/abbey_road.jpg"
       })
 
     album7 = Album.new({
@@ -138,7 +138,7 @@ require('pry-byebug')
       "quantity" => 2,
       "price" => 15,
       "sold" => 2,
-      "artwork" => "FILL IN URL LATER"
+      "artwork" => "/images/album_covers/SgtPepper.jpg"
       })
 
     album8 = Album.new({
@@ -148,7 +148,7 @@ require('pry-byebug')
       "quantity" => 3,
       "price" => 7,
       "sold" => 4,
-      "artwork" => "FILL IN URL LATER"
+      "artwork" => "/images/album_covers/bestofdylan.jpg"
       })
 
     album9 = Album.new({
@@ -158,7 +158,7 @@ require('pry-byebug')
       "quantity" => 7,
       "price" => 7,
       "sold" => 1,
-      "artwork" => "FILL IN URL LATER"
+      "artwork" => "/images/album_covers/petsounds.jpg"
       })
 
     album10 = Album.new({
@@ -168,7 +168,7 @@ require('pry-byebug')
       "quantity" => 5,
       "price" => 8,
       "sold" => 5,
-      "artwork" => "FILL IN URL LATER"
+      "artwork" => "/images/album_covers/go.jpg"
       })
 
     album11 = Album.new({
@@ -178,7 +178,7 @@ require('pry-byebug')
       "quantity" => 7,
       "price" => 9,
       "sold" => 8,
-      "artwork" => "FILL IN URL LATER"
+      "artwork" => "/images/album_covers/pinups.jpg"
       })
 
   album1.save
