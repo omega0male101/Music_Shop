@@ -32,6 +32,21 @@ body {
     text-shadow: 0 0 1px rgba(0,0,0,0.9);
   }
 
+.album_picture {
+  border-radius: 10px;
+  box-shadow: 15px 5px 15px 10px rgba(0,0,0,0.4);
+  transition: 0.7s;
+  align: left;
+  width: 22%;
+  margin-right: 60px;
+  padding-right: 0px;
+}
+
+.update_form {
+
+
+}
+
 
 /*menu bar screen*/
 

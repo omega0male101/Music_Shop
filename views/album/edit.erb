@@ -1,42 +1,44 @@
 <hr/>
 <form method="post" action="/albums">
 <center>
-<label for="title-name">Title:</label>
-<input id="title-name" type="text" name="title"  value="<%= @album.title %>"/>
-<br/>
 
-<label for="artist-select">Select a Artist:</label>
-    <select id="artist-select" name="artist_id">
-      <% @artists.each do|artist|%>
-    <option <%= "selected" if artist.id == @artist.id  %> value="<%=artist.id%>">
-      <%=artist.name%>
-    </option>
-      <%end%>
-     </select>
-     <br/>
 
-<label for="genre-select">Select a Genre:</label>
-    <select id="genre-select" name="genre_id">
+<div class="update_form">
+  <ul>
+    <li><label for="title-name">Title:</label>
+    <input id="title-name" type="text" name="title"  value="<%= @album.title %>"/><br/></li>
+    
+    <img class="album_picture" src="http://www.davidbowie.com/sites/g/files/g2000002506/f/styles/large/public/201302/1972_ziggy_cvr_fix_800sq.jpg">
+
+    <li><label for="artist-select">Select a Artist:</label><select id="artist-select" name="artist_id">
+        <% @artists.each do|artist|%>
+      <option <%= "selected" if artist.id == @artist.id  %> value="<%=artist.id%>">
+        <%=artist.name%>
+      </option>
+        <%end%>
+      </select><br/></li>
+
+      <li><label for="genre-select">Select a Genre:</label>
+      <select id="genre-select" name="genre_id">
       <% @genres.each do|genre|%>
-    <option <%= "selected" if genre.id == @album.genre_id %> value="<%=genre.id%>">
+      <option <%= "selected" if genre.id == @album.genre_id %> value="<%=genre.id%>">
       <%=genre.type%>
-    </option>
+      </option>
       <%end%>
-     </select>
-     <br/>
+      </select><br/></li>
 
-
-
- <label for="art">Artwork URL:</label>
- <input id="art" type="text" name="artwork" value="<%= @album.artwork %>"/>
- <hl/>
- <label for="quantity">Quantity:</label>
- <input id="quantity" type="number" name="quantity"value="<%= @album.quantity %>"/>
- <hl/>
- <label for="price">Price:</label>
- <input id="price" type="number" name="price"  value="<%= @album.price %>"/>
+     <li><label for="art">Artwork URL:</label>
+     <input id="art" type="text" name="artwork" value="<%= @album.artwork %>"/>
+     <br/></li>
+     
+     </li><label for="quantity">Quantity:</label>
+     <input id="quantity" type="number" name="quantity"value="<%= @album.quantity %>"/>
+     <br></ll>
+     
+     <li><label for="price">Price:</label>
+     <input id="price" type="number" name="price"  value="<%= @album.price %>"/></li>
 
  <input type="submit" value="Edit Album"/>
-
- </center>
+ </ul>
+</div>
 </form>
