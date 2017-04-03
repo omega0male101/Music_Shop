@@ -30,11 +30,13 @@ post '/albums/:id/delete' do
   erb(:'album/delete')
 end
 
+
 get '/albums/:id/edit' do
  @album = Album.find(params[:id])
  @genres = Genre.all
+ @artist = Artist.find(@album.artist_id).first
  @artists = Artist.all
- erb(:"albums/edit")
+ erb(:"album/edit")
 end
 
 post '/albums/:id/edit' do

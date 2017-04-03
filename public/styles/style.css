@@ -7,14 +7,40 @@ body {
   background-position: top
 }
 
+.blur {
+   color: transparent;
+   text-shadow: 0 0 3px rgba(0,0,0,0.5);
+   text-align: center;
+}
+
+.blur_bold {
+   color: transparent;
+   text-shadow: 0 0 2px rgba(0,0,0,0.5);
+   text-align: center;
+}
+
+.blur_bolder {
+   color: transparent;
+   text-shadow: 0 0 1px rgba(0,0,0,0.5);
+   text-align: center;
+}
+
+.album_table, th, td {
+    border: 1px solid black;
+    width: 75%;
+    color: transparent;
+    text-shadow: 0 0 1px rgba(0,0,0,0.9);
+  }
+
 
 /*menu bar screen*/
 
 nav {
-  max-width: 960px;
+  max-width: 1040px;
   mask-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 25%, #ffffff 75%, rgba(255, 255, 255, 0) 100%);
   margin: 0 auto;
   padding: 5px;
+  overflow:hidden;
 }
 
 nav ul {
@@ -46,24 +72,34 @@ nav ul li a:hover {
 
 /*menu bar screen||||||||||||*/
 
-input {
-  margin: 5px;
-}
-
-.bio {
-  width: 80%;
-  float: left;
-  padding-right: 20px;
-  text-align: justify;
-
-}
-
-.album_table, th, td {
-    border: 1px solid black;
-    width: 75%;
-
-  }
-
 .name {
   width: 20%;
 }*/
+
+#header {
+    background: #ccc;
+    padding: 20px;
+    }
+  
+  #sidebar {
+    float: right;
+    width: 12%;
+    /*background: #999;*/
+    text-align: right;
+    padding: 20px;
+    color: transparent;
+    text-shadow: 0 0 1px rgba(0,0,0,0.5);
+    }
+  
+  #content {
+    margin-top: 7%;
+    margin-left: 7%;
+    margin-right: 20%;
+    /*box-shadow: 10px 10px 5px #888888;*/
+    }
+  
+  #footer {
+    clear: right;
+    background: #eee;
+    padding: 20px;
+    }

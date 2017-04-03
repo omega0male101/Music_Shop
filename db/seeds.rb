@@ -77,7 +77,7 @@ require('pry-byebug')
       "quantity" => 7,
       "price" => 9,
       "sold" => 5,
-      "artwork" => "FILL IN URL LATER"
+      "artwork" => "http://www.davidbowie.com/sites/g/files/g2000002506/f/styles/large/public/201302/1972_ziggy_cvr_fix_800sq.jpg"
       })
 
     album2 = Album.new({

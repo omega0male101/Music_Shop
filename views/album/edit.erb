@@ -1,0 +1,42 @@
+<hr/>
+<form method="post" action="/albums">
+<center>
+<label for="title-name">Title:</label>
+<input id="title-name" type="text" name="title"  value="<%= @album.title %>"/>
+<br/>
+
+<label for="artist-select">Select a Artist:</label>
+    <select id="artist-select" name="artist_id">
+      <% @artists.each do|artist|%>
+    <option <%= "selected" if artist.id == @artist.id  %> value="<%=artist.id%>">
+      <%=artist.name%>
+    </option>
+      <%end%>
+     </select>
+     <br/>
+
+<label for="genre-select">Select a Genre:</label>
+    <select id="genre-select" name="genre_id">
+      <% @genres.each do|genre|%>
+    <option <%= "selected" if genre.id == @album.genre_id %> value="<%=genre.id%>">
+      <%=genre.type%>
+    </option>
+      <%end%>
+     </select>
+     <br/>
+
+
+
+ <label for="art">Artwork URL:</label>
+ <input id="art" type="text" name="artwork" value="<%= @album.artwork %>"/>
+ <hl/>
+ <label for="quantity">Quantity:</label>
+ <input id="quantity" type="number" name="quantity"value="<%= @album.quantity %>"/>
+ <hl/>
+ <label for="price">Price:</label>
+ <input id="price" type="number" name="price"  value="<%= @album.price %>"/>
+
+ <input type="submit" value="Edit Album"/>
+
+ </center>
+</form>
