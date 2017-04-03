@@ -1,30 +1,34 @@
+<center>
 <p> Currently everything that is in stock!</p>
 
+
+<table class="album_table">
+  <tr>
+    <th>Title</th>
+    <th>Artist</th>
+    <th>Genre</th>
+    <th>Stock</th>
+    <th>Sold</th>
+    <th>Price</th>
+  </tr>
   <% for album in @albums %>
-
-     <p>
-
-   Title:  <%= album.title()%>
-     </p>
-
-     <p>
-   Artist:  <%= album.artist().name %>
-     </p>
-
-     <p>
-   Genre:  <%= album.genre().name %>
-     </p>
-
-     <p>
-   In stock:  <%= album.quantity()%>
-     </p>
-     <p>
-   Sold:  <%= album.sold()%>
-     </p>
-     <p>
-   Price:  <%= album.price()%>
-     </p>
-
-
-<hr><hr>
- <% end %>
+  <tr>
+    <td><%= album.title()%></td>
+    <td><%= album.artist().name %></td>
+    <td><center><%= album.genre().type %></center></td>
+    <td><center><%= album.quantity()%></center></td>
+    <td><center><%= album.sold()%></center></td>
+    <td><center>£<%= album.price()%></center></td>
+    <td><form action="/albums/:id/edit">
+    <input type="submit" value="Edit" />
+  </form></td>
+    <td><form action="/albums/:id/delete">
+    <input type="submit" value="Delete" />
+  </form></td>
+    <td><form action="/albums">
+    <input type="submit" value="Sell" />
+  </form></td>
+  </tr>
+  <% end %>
+</table>
+</center>

@@ -3,70 +3,52 @@
 body {
   font-family: "Lucida Console", Monaco, monospace;
   margin: 0px;
-  background-color: linen;
-
+  background: black url('/images/background.jpg');
+  background-position: top
 }
 
-ul {
-  list-style: none;
-}
 
-li {
-  display: inline;
-}
+/*menu bar screen*/
 
 nav {
-  background-color: lightskyblue;
-  padding: 3px;
+  max-width: 960px;
+  mask-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 25%, #ffffff 75%, rgba(255, 255, 255, 0) 100%);
+  margin: 0 auto;
+  padding: 5px;
 }
 
-p {
-  margin-left: 20px;
+nav ul {
+  text-align: center;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.2) 25%, rgba(255, 255, 255, 0.2) 75%, rgba(255, 255, 255, 0) 100%);
+  width: 100%;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
 }
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  padding: 20px;
+  font-family: "Roboto";
+  color: rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.4);
+  font-size: 25px;
+  text-decoration: none;
+  display: block;
+}
+
+nav ul li a:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/*menu bar screen||||||||||||*/
 
 input {
   margin: 5px;
 }
-
-.house_img {
-  height:150px;
-  width:auto;
-  display:inline-block;
-  align: left;
-  border: 1px;
-  border-style: solid;
-  margin: 5px;
-
-}
-
-.homepage_content {
-  text-align: center;
-
-} 
-
-.bottom_nav {
-  text-align: center;
-  margin-bottom: 20px;
-
-} 
-
-
-#frontpage_image {
-  height:300px;
-  width:auto;
-  border: 1px;
-  border-style: solid;
-}
-
-.grid-row {
-  display:flex;
-  flex-direction: row;
-}
-
-.grid-cell {
-  flex:4;
-  padding: 2px;
-}*/
 
 .bio {
   width: 80%;
@@ -76,12 +58,12 @@ input {
 
 }
 
+.album_table, th, td {
+    border: 1px solid black;
+    width: 75%;
+
+  }
+
 .name {
   width: 20%;
 }*/
-
-#house_name {
-  font-family: fantasy;
-  font-weight: bold;
-  font-size: 2em;
-}

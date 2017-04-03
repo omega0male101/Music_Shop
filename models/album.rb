@@ -55,6 +55,13 @@ class Album
   def artist
     sql = "SELECT * FROM artists WHERE id = #{@artist_id}"
     result = SqlRunner.run(sql)
+    return Artist.new(result.first)
+  end
+
+  def genre
+    sql = "SELECT * FROM genres WHERE id = #{@genre_id}"
+    result = SqlRunner.run(sql)
+    return Genre.new(result.first)
   end
 
   def stock

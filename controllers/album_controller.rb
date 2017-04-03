@@ -23,3 +23,22 @@ post '/albums' do
   @album.save()
   erb(:'album/create')
 end
+
+post '/albums/:id/delete' do
+  @album = Album.new(params)
+  @album.save()
+  erb(:'album/delete')
+end
+
+get '/albums/:id/edit' do
+ @album = Album.find(params[:id])
+ @genres = Genre.all
+ @artists = Artist.all
+ erb(:"albums/edit")
+end
+
+post '/albums/:id/edit' do
+ @album = Album.new(params)
+ @album.update
+ redirect to("/albums")
+end
