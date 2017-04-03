@@ -39,6 +39,23 @@ class Album
     result = SqlRunner.run(sql)
   end
 
+  # def stock_level
+  #   level = ""
+  #   if @quntity > 11
+  #     level = "High"
+  #   elsif @quantity > 3
+  #     level = "Medium"
+  #   elsif @quantity > 0 && @quantity < 4
+  #     level = "Ran ooot!!"
+  #   else
+  #     level "No stock found"
+  #   end
+  # end
+
+  def artist
+    sql = "SELECT * FROM artists WHERE id = #{@artist_id}"
+    result = SqlRunner.run(sql)
+  end
 
   def stock
     sql = "SELECT quantity FROM albums WHERE id = #{id}"
