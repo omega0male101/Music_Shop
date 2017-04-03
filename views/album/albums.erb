@@ -1,4 +1,4 @@
-<p>hello</p>
+<p> Currently everything that is in stock!</p>
 
   <% for album in @albums %>
 
@@ -8,11 +8,11 @@
      </p>
 
      <p>
-   Artist:  <%= album.artist_id()%>
+   Artist:  <%= album.artist().name %>
      </p>
 
      <p>
-   Genre:  <%= album.genre_id()%>
+   Genre:  <%= album.genre().name %>
      </p>
 
      <p>

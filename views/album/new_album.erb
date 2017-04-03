@@ -9,17 +9,17 @@
 <input id="artist-name" type="text" name="name" />
 
 <label for="artist-select">Select a Artist:</label>
-    <select id="artist-select" name="type">
+    <select id="artist-select" name="artist_id">
       <% @artists.each do|artist|%>
     <option value="<%=artist.id%>">
-      <%=artist.type%>
+      <%=artist.name%>
     </option>
       <%end%>
      </select>
      <br/>
 
 <label for="genre-select">Select a Genre:</label>
-    <select id="genre-select" name="type">
+    <select id="genre-select" name="genre_id">
       <% @genres.each do|genre|%>
     <option value="<%=genre.id%>">
       <%=genre.type%>

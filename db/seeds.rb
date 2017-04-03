@@ -74,5 +74,5 @@ require('pry-byebug')
   album2.save
   album3.save
 
-binding.pry
+
 nil
