@@ -8,10 +8,27 @@
     src: url(../fonts/Corner-Regular.otf) format("truetype");
 }
 
+@font-face {
+    font-family: "Karla-Regular";
+    src: url(../fonts/Karla-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Rajdhani-Regular";
+    src: url(../fonts/Rajdhani-Regular.ttf) format("truetype");
+}
+
+.p-font {
+  font-family: "Rajdhani-Regular";
+  font-color: rgba(255,255,255,1.5);
+  color: white;
+}
+
 
 
 body {
-  font-family: "Lucida Console", Monaco, monospace;
+  font-family: "Karla-Regular", Monaco, monospace;
+  color: white;
   margin: 0px;
   background: black url('/images/background.jpg');
   background-repeat: no-repeat;
@@ -24,20 +41,58 @@ body {
 
 .blur {
    color: transparent;
-   text-shadow: 0 0 1px rgba(255,255,255,0.9);
+   text-shadow: 0 0 1px rgba(255,255,255,1.5);
    text-align: center;
+   font-family: "Karla-Regular";
+   margin-top: 0px;
 }
 
 .blur_bold {
    color: transparent;
-   text-shadow: 0 0 1px rgba(255,255,255,0.5);
+   text-shadow: 0 0 1px rgba(255,255,255,1);
    text-align: center;
+   margin-top: 0px;
 }
 
 .blur_bolder {
    color: transparent;
    text-shadow: 0 0 1px rgba(255,255,255,0.8);
    text-align: center;
+   margin-top: 0px;
+
+}
+
+.blur_bold-small {
+  color: transparent;
+  text-shadow: 0 0 1px rgba(255,255,255,1);
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+.btt-submit-album {
+  font-size: 17px;
+
+  display: inline-block;
+  background-color: transparent;
+  width: 200px;
+  padding: 8px;
+  margin: 5px;
+  color: #fff;
+  border: 2px solid #fff;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  transition: background-color 0.2s ease-out,
+              color 0.2s ease-out;
+}
+
+.btt-submit-album:hover,
+.btt-submit-album:active {
+  background-color: #fff;
+  color: #000;
+  transition: background-color 0.3s ease-in,
+              color 0.3s ease-in;
 }
 
 .album_table, th, td {
@@ -47,11 +102,21 @@ body {
     font-color: white;
     color: white;
     border-radius: 3px;
-    font-family: courier;
+    font-family: Karla-Regular;
+
   }
 
 .table-indent {
   padding-left: 6px;
+}
+
+.edit-page-details {
+  font-family: "Corner-Regular";
+  font-size: 21px;
+}
+
+.hide-sold {
+  display: none;
 }
 
 .album_picture {
@@ -83,9 +148,9 @@ body {
 
 .redirect {
   text-align: center;
-  font-size: 18px;
+  font-size: 26px;
   color: transparent;
-  text-shadow: 0 0 1px rgba(0,0,0,0.8);
+  text-shadow: 0 0 1px rgba(255,255,255,1.5);
 }
 
 .artist_form {
@@ -109,6 +174,8 @@ body {
 
 .button {
   display: inline-block;
+  font-size: 17px;
+  margin: 5px;
   width: 200px;
   padding: 8px;
   color: #fff;
@@ -121,6 +188,33 @@ body {
 }
 .button:hover,
 .button:active {
+  background-color: #fff;
+  color: #000;
+  transition: background-color 0.3s ease-in,
+              color 0.3s ease-in;
+}
+
+
+
+.button_artist {
+  display: inline-block;
+  width: 200px;
+  padding: 8px;
+  color: #fff;
+  border: 2px solid #fff;
+  text-align: center;
+  outline: none;
+  font-family: "Rajdhani-Regular";
+  text-decoration: none;
+  bottom: 10px;
+  position: relative;
+
+  transition: background-color 0.2s ease-out,
+              color 0.2s ease-out;
+}
+
+.button_artist:hover,
+.button_artist:active {
   background-color: #fff;
   color: #000;
   transition: background-color 0.3s ease-in,
@@ -146,6 +240,9 @@ body {
   float: right;
   text-align: justify;
   color: white;
+  font-family: Rajdhani-Regular;
+/*  font-family: Karla-Regular;*/
+  text-transform: uppercase;
 }
 
 .artist_list {
@@ -163,6 +260,7 @@ nav {
   margin: 0;
   padding: 5px;
   overflow:hidden;
+
 }
 
 nav ul {

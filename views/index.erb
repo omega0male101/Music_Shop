@@ -1,9 +1,9 @@
 
 <div class="homepage_content">
-  <h1 class="blur_bold">listen to the music</h1>
+  <h1 class="blur_bold">We're running low, maybe buy some more?</h1>
 
   <div id="content">
-  <center><p><strong>Albums which are currently in low stock</strong>
+  <center><p>
 
   <table class="album_table">
     <tr>
@@ -27,6 +27,9 @@
     </tr>
     <% end %>
   </table>
+
+  <p><strong class="p-font">You have sold <%=@total_sales%> albums this month and have <b><%=@current_stock%></b> left in stock.</strong></p>
+  
   </div>
   </center>
   

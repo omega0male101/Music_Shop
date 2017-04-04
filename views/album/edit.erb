@@ -1,13 +1,13 @@
-<hr/>
 <form method="post" action="/albums/<%= @album.id %>">
 <center>
+<h1 class="blur_bold-small">Care to update the details?</h1>
 
 
 <div class="update_form">
 
 <img class="album_picture" src="<%= @album.artwork %>">
 
-  <ul>
+  <ul class="edit-page-details">
     <li><label for="title-name">Title:</label>
     <input id="title-name" type="text" name="title"  value="<%= @album.title %>"/><br/></li>
 
@@ -39,8 +39,10 @@
      <li><label for="price">Price:</label>
      <input id="price" type="number" name="price"  value="<%= @album.price %>"/></li>
 
- <input type="submit" value="Update Album"/>
- </ul>
+     <input class="hide-sold" id="sold" type="text" name="sold" value="<%= @album.sold %>"/>
+     </ul>
+ <input  class="btt-submit-album"type="submit" value="UPDATE ALBUM"/>
+ 
  <a class="button" href="/albums">BACK TO ALBUMS</a>
 </div>
 </form>
