@@ -30,12 +30,12 @@ class Album
     sql = "UPDATE albums SET
       title = '#{ @title }',
       artwork = '#{ @artwork }',
-      artist_id = '#{ @artist_id }',
-      genre_id = '#{ @genre_id }',
-      quantity = '#{ @quantity }',
-      price = '#{ @price }',
-      sold = '#{ @sold }'
-      WHERE id = '#{ @id }';"
+      artist_id = #{ @artist_id },
+      genre_id = #{ @genre_id },
+      quantity = #{ @quantity },
+      price = #{ @price },
+      sold = #{ @sold }
+      WHERE id = #{ @id };"
     result = SqlRunner.run(sql)
   end
 
@@ -51,6 +51,7 @@ class Album
   #     level "No stock found"
   #   end
   # end
+
 
   def artist
     sql = "SELECT * FROM artists WHERE id = #{@artist_id}"
@@ -69,8 +70,29 @@ class Album
     result = SqlRunner.run(sql).first().values().pop().to_i
   end
 
+  def sell
+    sql = "UPDATE albums SET sold = sold + 1 WHERE id = #{@id}; UPDATE albums SET quantity = quantity - 1 WHERE id = #{@id};"
+    result = SqlRunner.run(sql)
+  end
+
+
+  def self.low_stock
+    sql = "SELECT * FROM albums WHERE quantity < 5"
+    result = Album.map_items(sql)
+  end
+  
+  def self.sold_amount
+    sql = "SELECT SUM(SOLD) FROM albums;"
+    result = SqlRunner.run(sql).first().values().pop().to_i
+  end
+
+  def self.current_stock
+    sql = "SELECT SUM(QUANTITY) FROM albums;"
+    result = SqlRunner.run(sql).first().values().pop().to_i
+  end
+
   def self.all()
-    sql = "SELECT * FROM albums;"
+    sql = "SELECT * FROM albums ORDER BY id;"
     result = Album.map_items(sql)
   end
 

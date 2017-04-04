@@ -9,6 +9,8 @@ require_relative('./controllers/artist_controller')
 
 
 get '/' do
-  @artists = Artist.all
+  @total_sales = Album.sold_amount()
+  @current_stock = Album.current_stock()
+  @albums = Album.low_stock()
   erb( :index )
 end

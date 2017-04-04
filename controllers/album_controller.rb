@@ -1,4 +1,3 @@
-
 require('sinatra')
 require('sinatra/contrib/all')
 require('pry-byebug')
@@ -9,7 +8,16 @@ require_relative('../models/genre')
 
 get '/albums' do
   @albums = Album.all
+  @total_sales = Album.sold_amount()
+  @current_stock = Album.current_stock()
   erb(:'album/albums')
+end
+
+get '/albums/gallery' do
+  @albums = Album.all
+  @total_sales = Album.sold_amount()
+  @current_stock = Album.current_stock()
+  erb(:'album/gallery', :layout => false)
 end
 
 get  '/albums/new' do
@@ -24,12 +32,13 @@ post '/albums' do
   erb(:'album/create')
 end
 
-post '/albums/:id/delete' do
-  @album = Album.new(params)
-  @album.save()
+get  '/albums/:id/delete' do
+  @album = Album.find(params[:id])
+  @genres = Genre.all
+  @artists = Artist.all
+  @artist = Artist.find(@album.artist_id).first
   erb(:'album/delete')
 end
-
 
 get '/albums/:id/edit' do
  @album = Album.find(params[:id])
@@ -39,8 +48,22 @@ get '/albums/:id/edit' do
  erb(:"album/edit")
 end
 
-post '/albums/:id/edit' do
+post '/albums/:id/delete' do
+  @album = Album.find(params[:id])
+  @album.delete_full()
+  erb(:'album/delete')
+end
+
+post '/albums/:id/sell' do
+  @album = Album.find(params[:id])
+  @album.sell()
+  redirect to("/albums")
+end
+
+
+post '/albums/:id' do
+
  @album = Album.new(params)
- @album.update
+ @album.update()
  redirect to("/albums")
 end
