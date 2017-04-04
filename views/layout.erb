@@ -3,49 +3,27 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="/styles/style.css">
+    <link href='fonts/Ailerons' rel='stylesheet'>
+
+    
     <title></title>
+    
   </head>
   <body>
-    <nav>
+    <nav class="navigation">
       <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/albums">Albums</a></li>
-        <li><a href="/artists">Artists</a></li>
-        <li><a href="/albums/new">Add Album</a></li>
-        <li><a href="/artists/new">Add Artist</a></li>
+        <li class="not-hide"><a href="/">Home</a></li>
+        <li class="not-hide"><a href="/albums">Albums</a></li>
+        <li class="not-hide"><a href="/artists">Artists</a></li>
+        <li class="not-hide"><a href="/artists/new">Add Stock</a></li>
+        <li><a href="/artists/new"></a></li>
+        <li><a href="/artists/new"></a></li>
+        <li><a href="/artists/new"></a></li>
       </ul>
     </nav>
    
 <%= yield %>
 
-      <div id="header">
-      <strong>HEADER</strong>
-      </div>
+   </body>
 
-      <div id="sidebar">
-      <p><strong>ALBUMS SOLD</strong></p>
-      <p><strong>albums sold</strong></p>
-      </div>
-
-      <div id="content">
-      <p><strong>CONTENT</strong>This is a test. This is a test. This is a test. This is a test. 
-      This is a test. This is a test. This is a test. This is a test. This is a test. 
-      This is a test. This is a test. This is a test. This is a test. This is a test. 
-      This is a test. This is a test. This is a test. This is a test. This is a test. 
-
-      </p>
-
-      <p>This is a test. This is a test. This is a test. This is a test. 
-      This is a test. This is a test. This is a test. This is a test. This is a test. 
-      This is a test. This is a test. This is a test. This is a test. This is a test. 
-      This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. 
-      This is a test. This is a test. This is a test. This is a test. This is a test. 
-      </p>
-      </div>
-
-      <div id="footer">
-      <strong>FOOTER</strong>
-      </div>
-  </body>
-
-</html>
+ </html>

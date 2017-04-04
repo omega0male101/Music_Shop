@@ -1,5 +1,5 @@
 <hr/>
-<form method="post" action="/albums">
+<form method="post" action="/albums/<%= @album.id %>">
 <center>
 
 
@@ -34,12 +34,13 @@
      
      </li><label for="quantity">Quantity:</label>
      <input id="quantity" type="number" name="quantity"value="<%= @album.quantity %>"/>
-     <br></ll>
+     <br></li>
      
      <li><label for="price">Price:</label>
      <input id="price" type="number" name="price"  value="<%= @album.price %>"/></li>
 
  <input type="submit" value="Update Album"/>
  </ul>
+ <a class="button" href="/albums">BACK TO ALBUMS</a>
 </div>
 </form>

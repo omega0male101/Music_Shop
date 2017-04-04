@@ -14,22 +14,38 @@
   </tr>
   <% for album in @albums %>
   <tr>
-    <td><%= album.title()%></td>
-    <td><%= album.artist().name %></td>
+    <td class="table-indent"><%= album.title()%></td>
+
+    <td class="table-indent"><%= album.artist().name %></td>
+
     <td><center><%= album.genre().type %></center></td>
+
     <td><center><%= album.quantity()%></center></td>
+
     <td><center><%= album.sold()%></center></td>
+
     <td><center>£<%= album.price()%></center></td>
+
     <td><form action="/albums/<%= album.id%>/edit">
     <input type="submit" value="Edit" />
   </form></td>
-    <td><form action="/albums/%= album.id%>/delete">
+
+    <td><form method="post" action="/albums/<%= album.id%>/delete">
     <input type="submit" value="Delete" />
   </form></td>
-    <td><form action="/albums">
+
+    <td><form method="post" action="/albums/<%= album.id%>/sell">
     <input type="submit" value="Sell" />
   </form></td>
+  
   </tr>
   <% end %>
 </table>
+  <p><strong class="blur">You have sold <%=@total_sales%> albums this month and have <b><%=@current_stock%></b> left in stock.</strong></p>
+<br/>
+    <a class="button" href="../artists/new">ADD ARTIST</a>
+    <a class="button" href="../albums/gallery">GALLERY VIEW</a>
+    <a class="button" href="../albums/new">ADD ALBUM</a>
+<br/>
+
 </center>

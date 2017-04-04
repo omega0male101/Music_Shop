@@ -1,8 +1,34 @@
 
 <div class="homepage_content">
-  <h1 class="blur">listen to the music</h1>
+  <h1 class="blur_bold">listen to the music</h1>
 
+  <div id="content">
+  <center><p><strong>Albums which are currently in low stock</strong>
 
+  <table class="album_table">
+    <tr>
+      <th>Title</th>
+      <th>Artist</th>
+      <th>Genre</th>
+      <th>Stock</th>
+      <th>Sold</th>
+      <th>Price</th>
+      
+    </tr>
+    <% for album in @albums %>
+    <tr>
+      <td class="table-indent"><%= album.title()%></td>
+      <td class="table-indent"><%= album.artist().name %></td>
+      <td><center><%= album.genre().type %></center></td>
+      <td><center><%= album.quantity()%></center></td>
+      <td><center><%= album.sold()%></center></td>
+      <td><center>£<%= album.price()%></center></td>
+      
+    </tr>
+    <% end %>
+  </table>
+  </div>
+  </center>
   
 </div>
 
