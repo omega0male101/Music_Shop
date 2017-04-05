@@ -4,15 +4,18 @@
 
 <table class="album_table">
   <tr>
-    <th><form action="/albums">
-    <input class="btt-sm-edit"type="submit" value="Title" />
-  </form></th>
+    <th><a class="th-btt-1"href="/albums/title"></a></th>
 
-    <th>Artist</th>
-    <th>Genre</th>
-    <th>Stock</th>
-    <th>Sold</th>
-    <th>Price</th>
+    <th><a class="th-btt-2"href="/albums/artist"></a></th>
+
+    <th><a class="th-btt-3"href="/albums/genre"></a></th>
+
+    <th><a class="th-btt-4"href="/albums/stock"></a></th>
+
+    <th><a class="th-btt-5"href="/albums/sold"></a></th>
+
+    <th><a class="th-btt-6"href="/albums/price"></a></th>
+
     
   </tr>
   <% for album in @albums %>

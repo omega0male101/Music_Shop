@@ -1,0 +1,134 @@
+.th-btt-1:before {
+  font-size: 18px;
+  content: "Album Title";
+  background-color: transparent;
+  padding: 4px;
+  margin: 2px;
+  color: #fff;
+  border: 0px solid #fff;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+}
+
+.th-btt-1:hover:before,
+.th-btt-1:visited,
+.th-btt-1:link,
+.th-btt-1:active {
+  content: "Sort by Albums Titles";
+  background-color: transparent;
+  text-decoration: none;
+} 
+
+.th-btt-2:before {
+  font-size: 18px;
+  content: "Artist Name";
+  background-color: transparent;
+  padding: 4px;
+  margin: 2px;
+  color: #fff;
+  border: 0px solid #fff;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+}
+
+.th-btt-2:hover:before,
+.th-btt-2:visited,
+.th-btt-2:link,
+.th-btt-2:active {
+  content: "Sort by Name";
+  background-color: transparent;
+  text-decoration: none;
+} 
+.th-btt-3:before {
+  font-size: 18px;
+  content: "Genre";
+  background-color: transparent;
+  padding: 4px;
+  margin: 2px;
+  color: #fff;
+  border: 0px solid #fff;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+}
+
+.th-btt-3:hover:before,
+.th-btt-3:visited,
+.th-btt-3:link,
+.th-btt-3:active {
+  content: "Sort";
+  background-color: transparent;
+  text-decoration: none;
+} 
+
+.th-btt-4:before {
+  font-size: 18px;
+  content: "Stock";
+  background-color: transparent;
+  padding: 2px;
+  margin: 2px;
+  color: #fff;
+  border: 0px solid #fff;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+}
+
+.th-btt-4:hover:before,
+.th-btt-4:visited,
+.th-btt-4:link,
+.th-btt-4:active {
+  content: "Sort";
+  background-color: transparent;
+  text-decoration: none;
+  padding: 8px;
+} 
+
+.th-btt-5:before {
+  font-size: 18px;
+  content: "Sold";
+  background-color: transparent;
+  padding: 1px;
+  margin: 2px;
+  color: #fff;
+  border: 0px solid #fff;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  padding: 5px;
+}
+
+.th-btt-5:hover:before,
+.th-btt-5:visited,
+.th-btt-5:link,
+.th-btt-5:active {
+  content: "Sort";
+  background-color: transparent;
+  text-decoration: none;
+  padding: 6px;
+} 
+
+.th-btt-6:before {
+  font-size: 18px;
+  content: "Price";
+  background-color: transparent;
+  padding: 2px;
+  margin: 2px;
+  color: #fff;
+  border: 0px solid #fff;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+}
+
+.th-btt-6:hover:before,
+.th-btt-6:visited,
+.th-btt-6:link,
+.th-btt-6:active {
+  content: "Sort";
+  background-color: transparent;
+  text-decoration: none;
+  padding: 5px;
+} 

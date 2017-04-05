@@ -6,6 +6,7 @@ require('pry-byebug')
   Album.delete_all
   Artist.delete_all
   Genre.delete_all
+  # View.delete_all
 
 #--SETTING UP Artists
     artist1 = Artist.new({
@@ -123,6 +124,9 @@ require('pry-byebug')
   genre9.save
   genre10.save
   genre11.save
+
+  # view = View.new({"sort" => "default"})
+  # view.save
 
 
 

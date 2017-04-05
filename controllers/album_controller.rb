@@ -8,12 +8,48 @@ require_relative('../models/genre')
 
 get '/albums' do
   @albums = Album.all
-  @albums_title = Album.all_title
-  @albums_sold = Album.all_sold
-  @albums_quantity = Album.all_quantity
-  @albums_price = Album.all_price
   @top_seller = Album.top_seller
   erb(:'album/albums')
+end
+
+get '/albums/price' do
+  @albums = Album.all_price
+  @top_seller = Album.top_seller
+  erb(:'album/albums')
+end
+
+get '/albums/title' do
+  @albums = Album.all_title
+  @top_seller = Album.top_seller
+  erb(:'album/albums')
+end
+
+get '/albums/sold' do
+  @albums = Album.all_sold
+  @top_seller = Album.top_seller
+  erb(:'album/albums')
+end
+
+get '/albums/stock' do
+  @albums = Album.all_quantity
+  @top_seller = Album.top_seller
+  erb(:'album/albums')
+end
+
+get '/albums/artist' do
+  @albums = Album.all  
+  @albums.sort_by! {|album| album.artist().name }
+
+  @top_seller = Album.top_seller
+  erb(:'album/albums')    
+end
+
+get '/albums/genre' do
+  @albums = Album.all  
+  @albums.sort_by! {|album| album.genre().type }
+
+  @top_seller = Album.top_seller
+  erb(:'album/albums')    
 end
 
 get '/albums/gallery' do
@@ -54,13 +90,14 @@ end
 post '/albums/:id/delete' do
   @album = Album.find(params[:id])
   @album.delete_full()
-  erb(:'album/delete')
+  redirect to(  request.referer )
 end
 
 post '/albums/:id/sell' do
   @album = Album.find(params[:id])
   @album.sell()
-  redirect to("/albums")
+  # request.referer
+  redirect to(  request.referer )
 end
 
 
