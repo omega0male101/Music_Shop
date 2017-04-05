@@ -131,7 +131,9 @@ body {
     font-family: Karla-Regular;
 
   }
-
+#content {
+  width: 65%;
+}
 .table-indent {
   padding-left: 6px;
 }

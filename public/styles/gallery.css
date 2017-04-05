@@ -32,7 +32,7 @@ ul.rig li p {
 }
 
 ul.rig.columns-3 li {
-  width: 21%; /* this value + 2.5 should = 33% */
+  width: 21.7%; /* this value + 2.5 should = 33% */
 }
 
 h3 {
