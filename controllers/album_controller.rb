@@ -8,10 +8,10 @@ require_relative('../models/genre')
 
 get '/albums' do
   @albums = Album.all
-  @albums = Album.all_title
-  @albums = Album.all_sold
-  @albums = Album.all_quantity
-  @albums = Album.all_price
+  @albums_title = Album.all_title
+  @albums_sold = Album.all_sold
+  @albums_quantity = Album.all_quantity
+  @albums_price = Album.all_price
   @top_seller = Album.top_seller
   erb(:'album/albums')
 end
