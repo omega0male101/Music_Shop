@@ -1,32 +1,23 @@
 <ul class="rig columns-3 ">
+
+  <% for album in @albums %>
+
   <li>
-    <img src="images/pri_001.jpg" />
-    <h3>Image Title</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+    <a href="/albums/<%= album.id%>/edit"><img src="<%= album.artwork()%>" /></a>
+    <h3><%= album.title()%></h3>
+    <div class="box-left"><%= album.artist().name %></div>
+    <div class="box-right"><%= album.quantity()%> in stock</div>
+
   </li>
-  <li>
-    <img src="images/pri_002.jpg" />
-    <h3>Image Title</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-  </li>
-  <li>
-    <img src="images/pri_003.jpg" />
-    <h3>Image Title</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-  </li>
-  <li>
-    <img src="images/pri_004.jpg" />
-    <h3>Image Title</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-  </li>
-  <li>
-    <img src="images/pri_005.jpg" />
-    <h3>Image Title</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-  </li>
-  <li>
-    <img src="images/pri_006.jpg" />
-    <h3>Image Title</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-  </li>
+
+  <% end %>
 </ul>
+
+
+<br/>
+  <center>
+    <a class="button" href="../artists/new">ADD ARTIST</a>
+    <a class="button" href="../albums">LIST VIEW</a>
+    <a class="button" href="../albums/new">ADD ALBUM</a>
+  </center>
+<br/><br/>

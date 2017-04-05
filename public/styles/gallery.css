@@ -30,17 +30,15 @@ ul.rig li p {
   line-height: 1.5em;
   color: #999;
 }
-/* class for 2 columns */
-ul.rig.columns-2 li {
-  width: 47.5%; /* this value + 2.5 should = 50% */
-}
+
 /* class for 3 columns */
 ul.rig.columns-3 li {
-  width: 30.83%; /* this value + 2.5 should = 33% */
+  width: 21%; /* this value + 2.5 should = 33% */
 }
-/* class for 4 columns */
-ul.rig.columns-4 li {
-  width: 22.5%; /* this value + 2.5 should = 25% */
+
+
+h3 {
+  color:black;
 }
  
 @media (max-width: 1080px) {
@@ -58,4 +56,16 @@ ul.rig.columns-4 li {
     width: 100% !important; /* over-ride all li styles */
     margin: 0 0 20px;
   }
+}
+
+.box-left {
+  color: black;
+  float: left;
+  font-family: Karla-Italic;
+}
+
+.box-right {
+  color: black;
+  float: right;
+  font-family: Karla-Italic;
 }
