@@ -1,17 +1,21 @@
 <form method="post" action="/albums/<%= @album.id %>">
-<center>
-<h1 class="blur_bold-small">Care to update the details?</h1>
 
+  <center>
+  <h1 class="blur_bold-small">Care to update the details?</h1>
 
 <div class="update_form">
 
-<img class="album_picture" src="<%= @album.artwork %>">
+  <img class="album_picture" src="<%= @album.artwork %>">
 
   <ul class="edit-page-details">
-    <li><label for="title-name">Title:</label>
-    <input id="title-name" type="text" name="title"  value="<%= @album.title %>"/><br/></li>
 
-    <li><label for="artist-select">Select a Artist:</label><select id="artist-select" name="artist_id">
+    <li>
+      <label for="title-name">Title:</label>
+      <input id="title-name" type="text" name="title"  value="<%= @album.title %>"/><br/>
+    </li>
+
+    <li>
+      <label for="artist-select">Select a Artist:</label><select id="artist-select" name="artist_id">
         <% @artists.each do|artist|%>
       <option <%= "selected" if artist.id == @artist.id  %> value="<%=artist.id%>">
         <%=artist.name%>
@@ -19,30 +23,40 @@
         <%end%>
       </select><br/></li>
 
-      <li><label for="genre-select">Select a Genre:</label>
+    <li>
+      <label for="genre-select">Select a Genre:</label>
       <select id="genre-select" name="genre_id">
-      <% @genres.each do|genre|%>
+        <% @genres.each do|genre|%>
       <option <%= "selected" if genre.id == @album.genre_id %> value="<%=genre.id%>">
-      <%=genre.type%>
+        <%=genre.type%>
       </option>
-      <%end%>
-      </select><br/></li>
+        <%end%>
+      </select><br/>
+    </li>
 
-     <li><label for="art">Artwork URL:</label>
-     <input id="art" type="text" name="artwork" value="<%= @album.artwork %>"/>
-     <br/></li>
+    <li>
+      <label for="art">Artwork URL:</label>
+      <input id="art" type="text" name="artwork" value="<%= @album.artwork %>"/>
+      <br/>
+    </li>
      
-     </li><label for="quantity">Quantity:</label>
-     <input id="quantity" type="number" name="quantity"value="<%= @album.quantity %>"/>
-     <br></li>
+    </li>
+      <label for="quantity">Quantity:</label>
+      <input id="quantity" type="number" name="quantity"value="<%= @album.quantity %>"/>
+      <br>
+    </li>
      
-     <li><label for="price">Price:</label>
-     <input id="price" type="number" name="price"  value="<%= @album.price %>"/></li>
+    <li>
+      <label for="price">Price:</label>
+      <input id="price" type="number" name="price"  value="<%= @album.price %>"/>
+    </li>
 
-     <input class="hide-sold" id="sold" type="text" name="sold" value="<%= @album.sold %>"/>
-     </ul>
- <input  class="btt-submit-album"type="submit" value="UPDATE ALBUM"/>
- 
- <a class="button" href="/albums">BACK TO ALBUMS</a>
-</div>
+    <input class="hide-sold" id="sold" type="text" name="sold" value="<%= @album.sold %>"/>
+  </ul>
+
+   <input  class="btt-submit-album"type="submit" value="UPDATE ALBUM"/>
+   
+   <a class="button" href="/albums">BACK TO ALBUMS</a>
+
+  </div>
 </form>

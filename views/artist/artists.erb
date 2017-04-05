@@ -1,25 +1,16 @@
 <div class="artist_list">
-<% for artist in @artists %>
-
-
-   <h1 class="name-artist">
+    <% for artist in @artists %>
+  <h1 class="name-artist">
     <%= artist.name()%>
-   </h1>
-
-   <h1 class="name-line">
+  </h1>
+  <h1 class="name-line">
     <hr>
-   </h1>
-
-   <p class="bio">
+  </h1>
+  <p class="bio">
     <%= artist.bio()%>
-   </p>
-
- <% end %>
+  </p>
+    <% end %>
  <br/>
- <!--  <div class="bottom-artist">
-     <a class="button_artist" href="/albums">TO ALBUMS</a>
-     <a class="button_artist" href="/artists/new">ADD ARTIST</a>
-    </div> -->
- <div>
+<div>
 
 

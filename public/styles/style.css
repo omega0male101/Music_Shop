@@ -1,27 +1,27 @@
-@font-face {
-    font-family: "Ailerons";
-    src: url(../fonts/Ailerons-Typeface.otf) format("truetype");
-}
+  @font-face {
+      font-family: "Ailerons";
+      src: url(../fonts/Ailerons-Typeface.otf) format("truetype");
+  }
 
-@font-face {
-    font-family: "Corner-Regular";
-    src: url(../fonts/Corner-Regular.otf) format("truetype");
-}
+  @font-face {
+      font-family: "Corner-Regular";
+      src: url(../fonts/Corner-Regular.otf) format("truetype");
+  }
 
-@font-face {
-    font-family: "Karla-Regular";
-    src: url(../fonts/Karla-Regular.ttf) format("truetype");
-}
+  @font-face {
+      font-family: "Karla-Regular";
+      src: url(../fonts/Karla-Regular.ttf) format("truetype");
+  }
 
-@font-face {
-    font-family: "Karla-Italic";
-    src: url(../fonts/Karla-Italic.ttf) format("truetype");
-}
+  @font-face {
+      font-family: "Karla-Italic";
+      src: url(../fonts/Karla-Italic.ttf) format("truetype");
+  }
 
-@font-face {
-    font-family: "Rajdhani-Regular";
-    src: url(../fonts/Rajdhani-Regular.ttf) format("truetype");
-}
+  @font-face {
+      font-family: "Rajdhani-Regular";
+      src: url(../fonts/Rajdhani-Regular.ttf) format("truetype");
+  }
 
 .p-font {
   font-family: "Rajdhani-Regular";
@@ -38,24 +38,10 @@ body {
   background: black url('/images/background.jpg');
   background-repeat: no-repeat;
   min-height: 100%;
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-
-
-.body-gallery {
-  font-family: "Karla-Regular", Monaco, monospace;
-  color: white;
-  margin: 0px;
-  background: black url('/images/background2.jpg');
+  background-size: cover;
+  background-attachment: fixed;
   background-repeat: no-repeat;
-  min-height: 100%;
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center center;
+  background-position: center center;
 }
 
 .btt-sm-edit {
@@ -78,8 +64,6 @@ body {
     transition: background-color 0.3s ease-in,
                 color 0.3s ease-in;
 }
-
-
 
 .blur {
    color: transparent;
@@ -148,8 +132,6 @@ body {
 
   }
 
-
-
 .table-indent {
   padding-left: 6px;
 }
@@ -173,11 +155,6 @@ body {
   padding-right: 0px;
   margin-bottom: 10px;
   display: inline-block;
-}
-
-.update_form {
-  
-
 }
 
 .update_form, ul {
@@ -213,8 +190,6 @@ body {
     outline: none;
     text-decoration: none;
 }
-
-
 
 .button {
   display: inline-block;
@@ -265,6 +240,10 @@ body {
               color 0.3s ease-in;
 }
 
+.name {
+  width: 20%;
+}*/
+
 .name-artist {
   text-align: left;
   float: left;
@@ -285,7 +264,6 @@ body {
   text-align: justify;
   color: white;
   font-family: Rajdhani-Regular;
-/*  font-family: Karla-Regular;*/
   text-transform: uppercase;
 }
 
@@ -296,7 +274,7 @@ body {
 }
 
 
-/*menu bar screen*/
+/*+++++menu bar screen+++++*/
 
 nav {
   max-width: 90%;
@@ -340,23 +318,3 @@ nav ul li a:hover {
   color: rgba(0, 0, 0, 0.7);
 }
 
-/*menu bar screen||||||||||||*/
-
-.name {
-  width: 20%;
-}*/
-
-  
-  #content {
-    margin-top: 7%;
-    margin-left: 7%;
-    margin-right: 7%;
-   /*
-    box-shadow: 10px 10px 5px #888888;*/
-    }
-  
-  #footer {
-    clear: right;
-    background: #eee;
-    padding: 20px;
-    }

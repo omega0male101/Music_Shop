@@ -11,31 +11,21 @@
       <th>Artist</th>
       <th>Genre</th>
       <th>Stock</th>
-      
     </tr>
-    <% for album in @albums %>
+
+        <% for album in @albums %>
     <tr>
       <td class="table-indent"><%= album.title()%></td>
       <td class="table-indent"><%= album.artist().name %></td>
       <td><center><%= album.genre().type %></center></td>
       <td><center><%= album.quantity()%></center></td>
-      
-      
     </tr>
-    <% end %>
+        <% end %>
   </table>
 
   <p><strong class="p-font">You have sold <%=@total_sales%> albums this month.. and have <b><%=@current_stock%></b> left in stock.</strong></p>
   <p><strong class="p-font">Your top selling album this month is the '<%= @top_seller%>' album.</strong></p>
 
- <!--  <p><strong class="p-font">
-    <% for album in @albums_list %>
-    <% total = 0.00 %>
-    <% total =+ total + (album.price * album.sold) %>
-    £<%= total %>
-    <% end %>
-  </strong></p> -->
-  
   </div>
   </center>
   

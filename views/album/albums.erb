@@ -1,8 +1,8 @@
 <center>
-<h1 class="blur_bold"> everything we have in stock..</h1>
-
+  <h1 class="blur_bold"> everything we have in stock..</h1>
 
 <table class="album_table">
+
   <tr>
     <th><a class="th-btt-1"href="/albums/title"></a></th>
 
@@ -15,10 +15,9 @@
     <th><a class="th-btt-5"href="/albums/sold"></a></th>
 
     <th><a class="th-btt-6"href="/albums/price"></a></th>
-
-    
   </tr>
-  <% for album in @albums %>
+
+            <% for album in @albums %>
   <tr>
     <td class="table-indent"><%= album.title()%></td>
 
@@ -32,27 +31,34 @@
 
     <td><center>£<%= album.price()%></center></td>
 
-    <td><form action="/albums/<%= album.id%>/edit">
-    <input class="btt-sm-edit"type="submit" value="Edit" />
-  </form></td>
+    <td>
+      <form action="/albums/<%= album.id%>/edit">
+      <input class="btt-sm-edit"type="submit" value="Edit" />
+    </form>
+    </td>
 
-    <td><form method="post" action="/albums/<%= album.id%>/delete">
-    <input class="btt-sm-edit" type="submit" value="Delete" />
-  </form></td>
+    <td>
+      <form method="post" action="/albums/<%= album.id%>/delete">
+      <input class="btt-sm-edit" type="submit" value="Delete" />
+    </form>
+    </td>
 
-    <td><form method="post" action="/albums/<%= album.id%>/sell">
-    <input class="btt-sm-edit" type="submit" value="Sell" />
-  </form></td>
+    <td>
+      <form method="post" action="/albums/<%= album.id%>/sell">
+      <input class="btt-sm-edit" type="submit" value="Sell" />
+    </form>
+    </td>
   
   </tr>
-  <% end %>
+    <% end %>
 </table>
   
-<br/>
-    <a class="button" href="../artists/new">ADD ARTIST</a>
-    <a class="button" href="../albums/gallery">GALLERY VIEW</a>
-    <a class="button" href="../albums/new">ADD ALBUM</a>
-<br/>
-<div><br/><br/><br/></div>
+  <br/>
+      <a class="button" href="../artists/new">ADD ARTIST</a>
+      <a class="button" href="../albums/gallery">GALLERY VIEW</a>
+      <a class="button" href="../albums/new">ADD ALBUM</a>
+  <br/>
+
+  <div><br/><br/><br/></div>
 
 </center>
