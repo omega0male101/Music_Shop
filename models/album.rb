@@ -101,6 +101,26 @@ class Album
     result = Album.map_items(sql)
   end
 
+  def self.all_title()
+    sql = "SELECT * FROM albums ORDER BY title;"
+    result = Album.map_items(sql)
+  end
+
+  def self.all_price()
+    sql = "SELECT * FROM albums ORDER BY price;"
+    result = Album.map_items(sql)
+  end
+
+  def self.all_sold()
+    sql = "SELECT * FROM albums ORDER BY sold;"
+    result = Album.map_items(sql)
+  end
+
+  def self.all_quantity()
+    sql = "SELECT * FROM albums ORDER BY quantity;"
+    result = Album.map_items(sql)
+  end
+
   def self.map_items(sql)
     albums = SqlRunner.run(sql)
     result = albums.map {|album| Album.new(album)}
