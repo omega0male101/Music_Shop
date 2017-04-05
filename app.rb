@@ -8,6 +8,7 @@ require_relative('./controllers/album_controller')
 require_relative('./controllers/artist_controller')
 
 
+
 get '/' do
   @total_sales = Album.sold_amount()
   @current_stock = Album.current_stock()

@@ -8,7 +8,6 @@ get '/artists' do
   erb(:'artist/artists')
 end
 
-
 get '/artists/new' do
   @artists = Artist.all()
   erb(:'artist/new_artist')

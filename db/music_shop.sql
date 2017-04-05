@@ -1,7 +1,7 @@
 DROP TABLE albums;
 DROP TABLE artists;
 DROP TABLE genres;
-DROP TABLE views;
+
 
 CREATE TABLE artists (
   id SERIAL8 PRIMARY KEY,
@@ -23,9 +23,4 @@ CREATE TABLE albums (
   quantity INT2,
   sold INT2,
   price INT2
-  );
-
-CREATE TABLE views (
-  id SERIAL8 PRIMARY KEY,
-  sort VARCHAR(255)
   );
