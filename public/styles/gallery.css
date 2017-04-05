@@ -7,7 +7,7 @@ ul.rig li {
   display: inline-block;
   padding: 10px;
   margin: 0 0 2.5% 2.5%;
-  background: #fff;
+  background: rgba(255,255,255,0.6);
   border: 1px solid #ddd;
   font-size: 16px;
   font-size: 1rem;
@@ -31,11 +31,9 @@ ul.rig li p {
   color: #999;
 }
 
-/* class for 3 columns */
 ul.rig.columns-3 li {
   width: 21%; /* this value + 2.5 should = 33% */
 }
-
 
 h3 {
   color:black;

@@ -57,9 +57,59 @@ require('pry-byebug')
     artist8 = Artist.new({
       "name" => "Artic Monkeys",
       "bio" => "Arctic Monkeys are an English rock band formed in 2002 in High Green, a suburb of Sheffield. The band consists of Alex Turner (lead vocals, rhythm/lead guitar), Matt Helders (drums, vocals), Jamie Cook (lead/rhythm guitar) and Nick OMalley (bass, backing vocals). Former band member Andy Nicholson (bass guitar, backing vocals) left the band in 2006 shortly after their debut album was released."
+      })
+
+    artist9 = Artist.new({
+      "name" => "Daft Punk",
+      "bio" => "Daft Punk is a French electronic music duo formed in 1993 by Guy-Manuel de Homem-Christo and Thomas Bangalter. The duo achieved significant popularity in the late 1990s as part of the French house movement and had continuous success in the years following, combining elements of house music with funk, techno, disco, rock music and synthpop influences. The duo were managed from 1996 to 2008 by Pedro Winter (also known as Busy P), the head of Ed Banger Records."
+      })
+
+    artist10 = Artist.new({
+      "name" => "Fat Boy Slim",
+      "bio" => "Norman Quentin Cook (born Quentin Leo Cook on 31 July 1963), also known by his stage name Fatboy Slim, is an English DJ, musician and record producer/mixer. As a solo electronic act, he has won ten MTV Video Music Awards and two Brit Awards. His records as Fatboy Slim also helped to popularise the big beat genre, which achieved mainstream popularity in the 1990s."
+      })
+
+    artist11 = Artist.new({
+      "name" => "Fleetwood Mac",
+      "bio" => "Fleetwood Mac are a British-American rock band, formed in London in 1967. The band has sold more than 100 million records worldwide, making them one of the worlds best-selling bands of all time. In 1998, selected members of Fleetwood Mac were inducted into the Rock and Roll Hall of Fame, and received the Brit Award for Outstanding Contribution to Music."
+      })
+
+    artist12 = Artist.new({
+      "name" => "Gorillaz",
+      "bio" => "Gorillaz are a British virtual band created in 1998 by Damon Albarn and Jamie Hewlett. The band consists of four animated members: 2D (lead vocals, keyboards), Murdoc Niccals (bass guitar and vocals), Noodle (guitar, keyboards, and vocals) and Russel Hobbs (drums and percussion). These members are fictional and are not personas of any real life musicians involved in the project. Writers and critics have described their music as alternative rock, Britpop, trip hop, hip hop, electronica, indie, dub, reggae and pop."
+      })
+
+    artist13 = Artist.new({
+      "name" => "Jamie T",
+      "bio" => "Jamie Alexander Treays (born 8 January 1986), known by his stage name Jamie T, is an English singer-songwriter from Wimbledon, South London. Jamie T is currently signed to Virgin Records but has released his Betty and the Selfish Sons EP on his own Pacemaker Records label. His backing band are called The Pacemakers and have recently been touring, advertising, and releasing material as Jamie T and The Pacemakers."
+      })
+
+    artist14 = Artist.new({
+      "name" => "Johnny Cash",
+      "bio" => "Johnny Cash (born J. R. Cash; February 26, 1932 – September 12, 2003) was an American singer-songwriter, guitarist, actor, and author. He is widely considered one of the most influential musicians of the 20th century and one of the best-selling music artists of all time, having sold more than 90 million records worldwide. Although primarily remembered as a country music icon, his genre-spanning songs and sound embraced rock and roll, rockabilly, blues, folk, and gospel."
+      })
+
+    artist15 = Artist.new({
+      "name" => "Pink Floyd",
+      "bio" => "Pink Floyd were an English rock band formed in London. They achieved international acclaim with their progressive and psychedelic music. Distinguished by their use of philosophical lyrics, sonic experimentation, extended compositions and elaborate live shows, they are one of the most commercially successful and influential groups in the history of popular music."
+      })
+
+    artist16 = Artist.new({
+      "name" => "Portishead",
+      "bio" => "Portishead are an English band formed in 1991 in Bristol. They are often considered one of the pioneers of trip hop music. The band are named after the nearby town of the same name, eight miles west of Bristol, along the coast. Portishead consists of Geoff Barrow, Beth Gibbons and Adrian Utley, while sometimes citing a fourth member, Dave McDonald, an engineer on their first records."
+      })
+
+    artist17 = Artist.new({
+      "name" => "Rolling Stones",
+      "bio" => "The Rolling Stones are an English rock band formed in London in 1962. The original line-up consisted of Brian Jones (rhythm guitar, harmonica), Mick Jagger (lead vocals), Keith Richards (lead guitar, backing vocals), Bill Wyman (bass), Charlie Watts (drums), and Ian Stewart (piano). Stewart was removed from the official line-up in 1963 but continued as a touring member until his death in 1985. Jones left the band less than a month prior to his death in 1969, having already been replaced by Mick Taylor, who remained until 1974."
+      })
+
+    artist18 = Artist.new({
+      "name" => "The Velvet Underground",
+      "bio" => "The Velvet Underground was a rock band formed in New York, America, by singer/guitarist Lou Reed, multi-instrumentalist John Cale, guitarist Sterling Morrison, and drummer Angus MacLise (who was replaced by Moe Tucker in 1965). Despite achieving little commercial success during its existence, the Velvet Underground is now recognized as one of the bands most influential to rock, underground, experimental, and alternative music."
+      })
 
     
-      })
 
   artist1.save
   artist2.save
@@ -69,7 +119,16 @@ require('pry-byebug')
   artist6.save
   artist7.save
   artist8.save
-
+  artist9.save
+  artist10.save
+  artist11.save
+  artist12.save
+  artist13.save
+  artist14.save
+  artist15.save
+  artist16.save
+  artist17.save
+  artist18.save
 
 #--SETTING UP GENRES
     genre0 = Genre.new({
@@ -88,7 +147,7 @@ require('pry-byebug')
       "type" => "Punk Rock"
       })
     genre4 = Genre.new({
-      "type" => "Jazz"
+      "type" => "Alternative"
       })
     genre5 = Genre.new({
       "type" => "Reggae"
@@ -179,7 +238,7 @@ require('pry-byebug')
       "quantity" => 7,
       "price" => 14,
       "sold" => 8,
-      "artwork" => "/images/album_covers/white_album.jpg"
+      "artwork" => "/images/album_covers/white_name.jpg"
       })
 
     album6 = Album.new({
@@ -251,6 +310,128 @@ require('pry-byebug')
       "sold" => 1,
       "artwork" => "/images/album_covers/bestofdylan.jpg"
       })
+
+    album13 = Album.new({
+      "title" => "Alive 2007",
+      "genre_id" => genre1.id,
+      "artist_id" => artist9.id,
+      "quantity" => 8,
+      "price" => 9,
+      "sold" => 79,
+      "artwork" => "/images/album_covers/alive.jpg"
+      })
+
+    album14 = Album.new({
+      "title" => "Why Try Harder",
+      "genre_id" => genre2.id,
+      "artist_id" => artist10.id,
+      "quantity" => 3,
+      "price" => 6,
+      "sold" => 6,
+      "artwork" => "/images/album_covers/whytryharder.jpg"
+      })
+
+    album15 = Album.new({
+      "title" => "Rumours",
+      "genre_id" => genre2.id,
+      "artist_id" => artist11.id,
+      "quantity" => 12,
+      "price" => 8,
+      "sold" => 15,
+      "artwork" => "/images/album_covers/rumors.jpg"
+      })
+
+    album16 = Album.new({
+      "title" => "Gorillaz",
+      "genre_id" => genre4.id,
+      "artist_id" => artist12.id,
+      "quantity" => 13,
+      "price" => 8,
+      "sold" => 2,
+      "artwork" => "/images/album_covers/gorillaz.jpg"
+      })
+
+
+    album17 = Album.new({
+      "title" => "Carry on the Grudge",
+      "genre_id" => genre2.id,
+      "artist_id" => artist13.id,
+      "quantity" => 4,
+      "price" => 9,
+      "sold" => 4,
+      "artwork" => "/images/album_covers/carryongrudge.jpg"
+      })
+
+    album18 = Album.new({
+      "title" => "Random Access Memories",
+      "genre_id" => genre1.id,
+      "artist_id" => artist9.id,
+      "quantity" => 40,
+      "price" => 9,
+      "sold" => 20,
+      "artwork" => "/images/album_covers/ram.jpg"
+      })
+
+    album19 = Album.new({
+      "title" => "American IV",
+      "genre_id" => genre6.id,
+      "artist_id" => artist14.id,
+      "quantity" => 14,
+      "price" => 8,
+      "sold" => 9,
+      "artwork" => "/images/album_covers/cash.jpg"
+      })
+
+    album20 = Album.new({
+      "title" => "The Wall",
+      "genre_id" => genre2.id,
+      "artist_id" => artist15.id,
+      "quantity" => 3,
+      "price" => 10,
+      "sold" => 31,
+      "artwork" => "/images/album_covers/thewall.jpg"
+      })
+
+    album21 = Album.new({
+      "title" => "Third",
+      "genre_id" => genre2.id,
+      "artist_id" => artist16.id,
+      "quantity" => 12,
+      "price" => 8,
+      "sold" => 1,
+      "artwork" => "/images/album_covers/third.jpg"
+      })
+
+    album22 = Album.new({
+      "title" => "Hot Rocks",
+      "genre_id" => genre2.id,
+      "artist_id" => artist17.id,
+      "quantity" => 17,
+      "price" => 9,
+      "sold" => 14,
+      "artwork" => "/images/album_covers/hotrocks.jpg"
+      })
+
+
+    album23 = Album.new({
+      "title" => "Andy Warhol",
+      "genre_id" => genre2.id,
+      "artist_id" => artist18.id,
+      "quantity" => 8,
+      "price" => 9,
+      "sold" => 4,
+      "artwork" => "/images/album_covers/warhol.jpg"
+      })
+
+    album24 = Album.new({
+      "title" => "Demon Days",
+      "genre_id" => genre10.id,
+      "artist_id" => artist12.id,
+      "quantity" => 11,
+      "price" => 7,
+      "sold" => 3,
+      "artwork" => "/images/album_covers/demondays.jpg"
+      })
     
 
   album1.save
@@ -265,5 +446,19 @@ require('pry-byebug')
   album10.save
   album11.save
   album12.save
+  album13.save
+  album14.save
+  album15.save
+  album16.save
+  album17.save
+  album18.save
+  album19.save
+  album20.save
+  album21.save
+  album22.save
+  album23.save
+  album24.save
+
+
 
 nil
