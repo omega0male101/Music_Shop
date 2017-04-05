@@ -39,6 +39,46 @@ body {
     background-position: center center;
 }
 
+
+.body-gallery {
+  font-family: "Karla-Regular", Monaco, monospace;
+  color: white;
+  margin: 0px;
+  background: black url('/images/background2.jpg');
+  background-repeat: no-repeat;
+  min-height: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.btt-sm-edit {
+  display: inline-block;
+  background-color: transparent;
+  border-radius: 3px;
+  
+
+  padding: 8px;
+ 
+  color: #fff;
+  border: 1px solid #fff;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  transition: background-color 0.2s ease-out,
+              color 0.2s ease-out;
+}
+
+.btt-sm-edit:hover {
+    background-color: #fff;
+    color: #000;
+    transition: background-color 0.3s ease-in,
+                color 0.3s ease-in;
+}
+
+
+
 .blur {
    color: transparent;
    text-shadow: 0 0 1px rgba(255,255,255,1.5);
@@ -124,7 +164,7 @@ body {
   box-shadow: 15px 5px 10px 10px rgba(0,0,0,0.4);
   float: left;
   width: 22%;
-  margin-left: 22%;
+  margin-left: 14%;
   margin-right: 35px;
   padding-right: 0px;
   margin-bottom: 10px;

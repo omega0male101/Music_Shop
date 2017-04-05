@@ -75,6 +75,11 @@ class Album
     result = SqlRunner.run(sql)
   end
 
+  def self.top_seller
+    sql = "SELECT title FROM albums ORDER BY sold DESC LIMIT 1;"
+    result = SqlRunner.run(sql).first().values().pop().to_i
+  end
+
 
   def self.low_stock
     sql = "SELECT * FROM albums WHERE quantity < 5"
@@ -83,7 +88,7 @@ class Album
   
   def self.sold_amount
     sql = "SELECT SUM(SOLD) FROM albums;"
-    result = SqlRunner.run(sql).first().values().pop().to_i
+    result = SqlRunner.run(sql).first().values().pop().to_s
   end
 
   def self.current_stock

@@ -27,21 +27,21 @@
     <td><center>£<%= album.price()%></center></td>
 
     <td><form action="/albums/<%= album.id%>/edit">
-    <input type="submit" value="Edit" />
+    <input class="btt-sm-edit"type="submit" value="Edit" />
   </form></td>
 
     <td><form method="post" action="/albums/<%= album.id%>/delete">
-    <input type="submit" value="Delete" />
+    <input class="btt-sm-edit" type="submit" value="Delete" />
   </form></td>
 
     <td><form method="post" action="/albums/<%= album.id%>/sell">
-    <input type="submit" value="Sell" />
+    <input class="btt-sm-edit" type="submit" value="Sell" />
   </form></td>
   
   </tr>
   <% end %>
 </table>
-  <p><strong class="blur">You have sold <%=@total_sales%> albums this month and have <b><%=@current_stock%></b> left in stock.</strong></p>
+  <p><strong class="blur">Your top seller this month is the '<%=@top_seller%>' album.</strong></p>
 <br/>
     <a class="button" href="../artists/new">ADD ARTIST</a>
     <a class="button" href="../albums/gallery">GALLERY VIEW</a>

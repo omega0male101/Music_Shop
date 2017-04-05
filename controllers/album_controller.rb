@@ -8,8 +8,7 @@ require_relative('../models/genre')
 
 get '/albums' do
   @albums = Album.all
-  @total_sales = Album.sold_amount()
-  @current_stock = Album.current_stock()
+  @top_seller = Album.top_seller
   erb(:'album/albums')
 end
 
