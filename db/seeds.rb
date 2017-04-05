@@ -35,7 +35,7 @@ require('pry-byebug')
       })
 
     artist5 = Artist.new({
-      "name" => "Creendence Clearwater Revival",
+      "name" => "Creedence",
       "bio" => "Creedence Clearwater Revival, often informally abbreviated to Creedence or CCR, was an American rock band active in the late 1960s and early 1970s. The band consisted of lead vocalist, lead guitarist, and primary songwriter John Fogerty, his brother rhythm guitarist Tom Fogerty, bassist Stu Cook and drummer Doug Clifford. Their musical style encompassed the roots rock, swamp rock, and blues rock genres. Despite their San Francisco Bay Area origins, they played in a Southern rock style, with lyrics about bayous, catfish, the Mississippi River, and other popular elements of Southern United States "
 
       })
@@ -265,7 +265,5 @@ require('pry-byebug')
   album10.save
   album11.save
   album12.save
-
-
 
 nil

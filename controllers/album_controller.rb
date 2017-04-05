@@ -56,7 +56,7 @@ get '/albums/gallery' do
   @albums = Album.all
   @total_sales = Album.sold_amount()
   @current_stock = Album.current_stock()
-  erb(:'album/gallery', :layout => false)
+  erb(:'album/gallery')
 end
 
 get  '/albums/new' do

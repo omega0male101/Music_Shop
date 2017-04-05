@@ -77,7 +77,7 @@ class Album
 
   def self.top_seller
     sql = "SELECT title FROM albums ORDER BY sold DESC LIMIT 1;"
-    result = SqlRunner.run(sql).first().values().pop().to_i
+    result = SqlRunner.run(sql).first().values().pop()
   end
 
 

@@ -14,6 +14,11 @@
 }
 
 @font-face {
+    font-family: "Karla-Italic";
+    src: url(../fonts/Karla-Italic.ttf) format("truetype");
+}
+
+@font-face {
     font-family: "Rajdhani-Regular";
     src: url(../fonts/Rajdhani-Regular.ttf) format("truetype");
 }
