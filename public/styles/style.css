@@ -244,32 +244,47 @@ body {
   width: 20%;
 }*/
 
-.name-artist {
+
+
+.box-name-list {
   text-align: left;
   float: left;
-  width: 30%;
+  width: 38%;
   color: white;
-
+  font-family: "Ailerons", Times, serif;
 }
 
-.name-line {
-  text-align: right;
+.h1-box-name-list {
+  text-align: left;
+  float: left;
+  width: 28%;
+  color: white;
+  font-family: "Ailerons", Times, serif;
+}
+
+.box-line-list {
   float: right;
-  width: 70%;
+  width: 72%;
+  padding-top: 21px;
+}
+
+.box-line-list {
 
 }
 
-.bio {
+.box-bio-list {
   float: right;
   text-align: justify;
   color: white;
   font-family: Rajdhani-Regular;
   text-transform: uppercase;
+  padding-bottom: 30px
 }
 
 .artist_list {
   margin-left: 10%;
   margin-right: 10%;
+  margin-bottom: 3%;
   font-family: "Ailerons", Times, serif;
 }
 

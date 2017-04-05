@@ -1,16 +1,26 @@
 <div class="artist_list">
-    <% for artist in @artists %>
-  <h1 class="name-artist">
-    <%= artist.name()%>
-  </h1>
-  <h1 class="name-line">
-    <hr>
-  </h1>
-  <p class="bio">
-    <%= artist.bio()%>
-  </p>
-    <% end %>
+  
+      <% for artist in @artists %>
+
+  <div class="box-name-list">
+    <h1 class="h1-box-name-list">
+      <%= artist.name()%>
+    </h1>
+  </div>
+
+  <div class="box-line-list">
+    <h1 class="h1-box-line-list">
+      <hr>
+    </h1>
+  </div>
+
+  <div class="box-bio-list">
+    <p class="bio">
+      <%= artist.bio()%>
+    </p>
+  </div>
+      <% end %>
  <br/>
-<div>
+</div>
 
 
