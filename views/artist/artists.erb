@@ -1,24 +1,49 @@
 <div class="artist_list">
-  
-      <% for artist in @artists %>
 
-  <div class="box-name-list">
-    <h1 class="h1-box-name-list">
+      <% counter = 0 %>  
+      <% for artist in @artists %>
+      <% if counter.even? %>
+
+  <div class="box-name-list-left">
+    <h1 class="h1-box-name-list-left">
       <%= artist.name()%>
     </h1>
   </div>
 
-  <div class="box-line-list">
-    <h1 class="h1-box-line-list">
+  <div class="box-line-list-left">
+    <h1 class="h1-box-line-list-left">
       <hr>
     </h1>
   </div>
 
-  <div class="box-bio-list">
+  <div class="box-bio-list-left">
     <p class="bio">
       <%= artist.bio()%>
     </p>
   </div>
+
+  <% elsif !counter.even? %>
+
+  <div class="box-name-list-right">
+    <h1 class="h1-box-name-list-right">
+      <%= artist.name()%>
+    </h1>
+  </div>
+
+  <div class="box-line-list-right">
+    <h1 class="h1-box-line-list-right">
+      <hr>
+    </h1>
+  </div>
+
+  <div class="box-bio-list-right">
+    <p class="bio">
+      <%= artist.bio()%>
+    </p>
+  </div>
+
+      <% end %>
+      <% counter += 1 %>
       <% end %>
  <br/>
 </div>

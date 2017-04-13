@@ -248,7 +248,7 @@ body {
 
 
 
-.box-name-list {
+.box-name-list-left {
   text-align: left;
   float: left;
   width: 38%;
@@ -256,7 +256,7 @@ body {
   font-family: "Ailerons", Times, serif;
 }
 
-.h1-box-name-list {
+.h1-box-name-list-left {
   text-align: left;
   float: left;
   width: 28%;
@@ -264,17 +264,13 @@ body {
   font-family: "Ailerons", Times, serif;
 }
 
-.box-line-list {
+.box-line-list-left {
   float: right;
   width: 72%;
   padding-top: 21px;
 }
 
-.box-line-list {
-
-}
-
-.box-bio-list {
+.box-bio-list-left {
   float: right;
   text-align: justify;
   color: white;
@@ -283,6 +279,37 @@ body {
   padding-bottom: 30px
 }
 
+
+.box-name-list-right {
+  text-align: right;
+  float: right;
+  width: 28%;
+  color: white;
+  font-family: "Ailerons", Times, serif;
+}
+
+.h1-box-name-list-right {
+  text-align: right;
+  float: right;
+
+  color: white;
+  font-family: "Ailerons", Times, serif;
+}
+
+.box-line-list-right {
+  float: left;
+  width: 72%;
+  padding-top: 22px;
+}
+
+.box-bio-list-right {
+  float: left;
+  text-align: justify;
+  color: white;
+  font-family: Rajdhani-Regular;
+  text-transform: uppercase;
+  padding-bottom: 30px
+}
 .artist_list {
   margin-left: 10%;
   margin-right: 10%;

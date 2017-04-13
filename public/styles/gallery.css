@@ -1,7 +1,7 @@
 ul.rig {
   list-style: none;
   font-size: 0px;
-  margin-left: -2.5%; /* should match li left margin */
+  margin-left: -2.5%;
 }
 ul.rig li {
   display: inline-block;
@@ -32,7 +32,7 @@ ul.rig li p {
 }
 
 ul.rig.columns-3 li {
-  width: 21.7%; /* this value + 2.5 should = 33% */
+  width: 21.7%; 
 }
 
 h3 {
@@ -51,7 +51,7 @@ h3 {
     margin-left: 0;
   }
   ul.rig li {
-    width: 100% !important; /* over-ride all li styles */
+    width: 100% !important;
     margin: 0 0 20px;
   }
 }
